@@ -1,29 +1,22 @@
-import './App.css';
+import React from "react";
+import { connect } from "react-redux";
 
-function App() {
+const Page = (props) => {
   return (
-    // aula - 2
-    <div className="App">
-      {/*aula - 1
-      
-      noda*/}
-
-
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <div>Ola mundo... {props.user}</div>
+  )
 }
 
-export default App;
+const mapStateToProps = (state) => { // apenas para pegar o state
+  return {
+    user: state.user // user vai ser vir como uma props que recebe user do reducer
+  };
+};
+
+const mapDispatchToProps = (dispatch) => { // aqui ficam as action para enviar para os reducers
+  return {
+
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Page);
