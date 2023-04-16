@@ -3,13 +3,21 @@ import { connect } from "react-redux";
 // configurando a rota: npm install react-router-dom --save
 import { BrowserRouter } from "react-router-dom"; // caixa mae de rotas
 import Routes from './Routes';
+import { Template } from "./components/MainComponents";
+import Header from './components/partials/Header';
+import Footer from './components/partials/Footer';
 
 
 const Page = (props) => {
   return (
     <BrowserRouter>
-  
-      <Routes /> {/*aqui fica as rotas*/}
+      <Template> {/*onde vai ficar minha estrutura padrao, do sistema como um todo*/}
+        <Header /> {/* heade e footer. fazem parte da pagina, ou seja componentes parciais termo tecnico*/}
+
+        <Routes /> {/*aqui fica as rotas*/}
+
+       <Footer/>
+      </Template>
     </BrowserRouter>
   )
 }

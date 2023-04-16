@@ -2,7 +2,7 @@
 bibliotecas
 npm install redux react-redux --save */
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom/client'; 
 //import { createStore } from 'redux'; foi subistituido pelo configureStore do biblioteca @reduxjs/toolkit
 import { configureStore } from '@reduxjs/toolkit';
 import { Provider } from 'react-redux';
